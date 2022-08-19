@@ -34,7 +34,7 @@ public class Waitfor {
 	}
 
 	public static void elementToBelickabale(WebElement element) {
-		wait.ignoring(NoSuchElementException.class);
+		wait.ignoring(NoSuchElementException.class,ElementClickInterceptedException.class);
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 
