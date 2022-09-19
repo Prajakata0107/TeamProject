@@ -5,9 +5,9 @@
     <classes>
       <class name="testcases.MenTestCases">
         <methods>
+          <include name="SearchPopularityResult"/>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="searchForFormalShirts"/>
         </methods>
       </class> <!-- testcases.MenTestCases -->
     </classes>

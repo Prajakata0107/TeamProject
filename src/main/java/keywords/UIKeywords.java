@@ -7,7 +7,9 @@ import java.util.List;
 import java.util.Set;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -38,6 +40,7 @@ public class UIKeywords {
 			driver = new InternetExplorerDriver();
 		}
 		log.info("browser launch successfully");
+		
 	}
 
 	public static void LaunchUrl(String url) {
@@ -51,7 +54,7 @@ public class UIKeywords {
 	}
 
 	public static void SwitchToWindow(String byTitle) {
-		String parentwindow = driver.getWindowHandle();
+		String windowa = driver.getWindowHandle();
 		Set<String> windows = driver.getWindowHandles();
 		String title = driver.getTitle();
 		for (String window : windows) {
@@ -172,6 +175,34 @@ public class UIKeywords {
 	public static void click(WebElement element) {
 		element.click();
 	}
+	public static void alertDemo() {
+		Alert alert=driver.switchTo().alert();
+		 String text =alert.getText();
+		 alert.dismiss();
+		 System.out.println(text);
+	}
+	public static String getTitle() {
+   String title = driver.getTitle();
+    return title;
+	}
 
+	public static Set<String> getWindowHandles() {
+		return null;
+	}
+
+	public static Object switchTo() {
+		Set<String> windows = driver.getWindowHandles();
+		String title = driver.getTitle();
+		for (String window : windows) {
+			if (driver.switchTo().window(window).getTitle().equals(title)) {
+				System.out.println("Switch on window:" + title);
+				break;
+			}		return null;
+		}
+		return title;
+	}
+
+	
 }
+
 

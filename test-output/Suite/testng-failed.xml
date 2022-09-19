@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="tests" name="Firefox(failed)">
+    <parameter name="browser-name" value="Firefox"/>
+    <classes>
+      <class name="testcases.Demo">
+        <methods>
+          <include name="m1"/>
+        </methods>
+      </class> <!-- testcases.Demo -->
+      <class name="testcases.MenTestCases">
+        <methods>
+          <include name="SearchPopularityResult"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="searchForFormalShirts"/>
+        </methods>
+      </class> <!-- testcases.MenTestCases -->
+      <class name="testcases.CasualShirtTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="verifyTheitemCountForCasualTShirts"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testcases.CasualShirtTest -->
+    </classes>
+  </test> <!-- Firefox(failed) -->
+  <test thread-count="2" parallel="tests" name="Chrome(failed)">
+    <parameter name="browser-name" value="Chrome"/>
+    <classes>
+      <class name="testcases.Demo">
+        <methods>
+          <include name="m1"/>
+        </methods>
+      </class> <!-- testcases.Demo -->
+      <class name="testcases.MenTestCases">
+        <methods>
+          <include name="SearchPopularityResult"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testcases.MenTestCases -->
+      <class name="testcases.CasualShirtTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="verifyTheitemCountForCasualTShirts"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testcases.CasualShirtTest -->
+    </classes>
+  </test> <!-- Chrome(failed) -->
+</suite> <!-- Failed suite [Suite] -->

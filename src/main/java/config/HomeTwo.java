@@ -18,6 +18,12 @@ public class HomeTwo {
 	public WebElement FormalShirts;
 	@FindBy(xpath = "(//li[@class='desktop-oddColumnContent'])[1]/descendant::a[contains(text(),'Casual')]")
 	public WebElement CasualShirt;
+	@FindBy(xpath = "(//li[@class='desktop-oddColumnContent'])[1]/descendant::a[contains(text(),'Sweatshirts')]")
+	public WebElement sweatshirts;
+	@FindBy(xpath = "//ul[@class=\"results-base\"]/li[@class=\"product-base\"]/a[@href=\"sweatshirts/hm/hm-men-black-relaxed-fit-hoodie/15193748/buy\"]")
+	public WebElement onesweatshirt;
+	@FindBy(xpath = "//img[@title=\"max Men Black Turtle Neck Sweater\"]")
+	public WebElement Swe;
 	public HomeTwo() {
 		PageFactory.initElements(UIKeywords.driver,this);
 	}
@@ -32,6 +38,16 @@ public class HomeTwo {
 	public void clickOnCasualShirt() {
 		UIKeywords.click(CasualShirt);
 	}
+	public void clickOnSweatShirt() {
+    UIKeywords.click(sweatshirts);
+	}
+	public void clickOnOneSweatShirt() {
+    UIKeywords.click(onesweatshirt);
+	}
+	public void clickOnSwe() {
+		UIKeywords.click(Swe);
+	}
+
 
 	public void clickOnFormalShirts() {
 		Waitfor.time(3);
